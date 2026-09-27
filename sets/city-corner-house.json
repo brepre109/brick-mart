@@ -1,0 +1,19 @@
+{
+  "id": "city-corner-house",
+  "name": "Corner House",
+  "theme": "City",
+  "ages": "5+",
+  "blurb": "A little house with a red roof, a brown door and two front windows.",
+  "boxColor": "blue",
+  "legend": { "w": "white", "d": "brown", "c": "glassBlue", "r": "red", "k": "darkGray", "s": "lightGray" },
+  "layers": [
+    ["wwwwww", "w....w", "w....w", "w....w", "wwddww", "..ss.."],
+    ["wwwwww", "w....w", "c....c", "c....c", "wcddcw", "......"],
+    ["wwwwww", "w....w", "c....c", "c....c", "wcddcw", "......"],
+    ["wwwwww", "w....w", "w....w", "w....w", "wwwwww", "......"],
+    ["rrrrrr", "rrrrrr", "rrrrrr", "rrrrrr", "rrrrrr", "......"],
+    ["......", "rrrrrr", "rrrrrr", "rrrrrr", "......", "......"],
+    ["......", "......", "rrrrrr", "....k.", "......", "......"],
+    ["......", "......", "......", "....k.", "......", "......"]
+  ]
+}

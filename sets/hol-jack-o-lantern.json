@@ -1,0 +1,96 @@
+{
+ "id": "hol-jack-o-lantern",
+ "name": "Jack-O-Lantern",
+ "theme": "Holiday",
+ "ages": "5+",
+ "blurb": "A round orange pumpkin with two black eyes, a toothy grin and a leafy brown stem.",
+ "boxColor": "purple",
+ "legend": {
+  "o": "orange",
+  "k": "black",
+  "b": "brown",
+  "g": "green"
+ },
+ "layers": [
+  [
+   ".........",
+   ".........",
+   ".........",
+   "....o....",
+   "...ooo...",
+   "...ooo..."
+  ],
+  [
+   ".........",
+   ".........",
+   "..ooooo..",
+   "..ooooo..",
+   ".ooooooo.",
+   ".okokooo."
+  ],
+  [
+   ".........",
+   "..ooooo..",
+   ".ooooooo.",
+   ".ooooooo.",
+   "ooooooooo",
+   "ookkkokoo"
+  ],
+  [
+   "....o....",
+   "..ooooo..",
+   ".ooooooo.",
+   "ooooooooo",
+   "ooooooooo",
+   "oooookkoo"
+  ],
+  [
+   "....o....",
+   "..ooooo..",
+   ".ooooooo.",
+   "ooooooooo",
+   "ooooooooo",
+   "okkoooooo"
+  ],
+  [
+   ".........",
+   "..ooooo..",
+   ".ooooooo.",
+   ".ooooooo.",
+   "ooooooooo",
+   "okkokkooo"
+  ],
+  [
+   ".........",
+   ".........",
+   "..ooooo..",
+   "..ooooo..",
+   ".ooooooo.",
+   ".oookkoo."
+  ],
+  [
+   ".........",
+   ".........",
+   ".........",
+   "....o....",
+   "...ooo...",
+   "...ooo..."
+  ],
+  [
+   ".........",
+   ".........",
+   ".........",
+   "....b....",
+   "....b....",
+   ".....gg.."
+  ],
+  [
+   ".........",
+   ".........",
+   ".........",
+   "....b....",
+   "....b....",
+   "........."
+  ]
+ ]
+}

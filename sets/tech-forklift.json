@@ -1,0 +1,96 @@
+{
+  "id": "tech-forklift",
+  "name": "Fork Truck",
+  "theme": "Machines",
+  "ages": "6+",
+  "blurb": "Little orange fork truck with a tall grey mast and a red crate up on the forks.",
+  "boxColor": "orange",
+  "legend": {
+    "o": "orange",
+    "k": "black",
+    "g": "darkGray",
+    "s": "lightGray",
+    "r": "red",
+    "y": "yellow",
+    "t": "tan"
+  },
+  "layers": [
+    [
+      ".kk..kk.....",
+      ".gggggg.....",
+      ".gggggg.....",
+      ".gggggg.....",
+      ".kk..kk....."
+    ],
+    [
+      ".kk..kk.....",
+      ".oooooog....",
+      ".oooooog....",
+      ".oooooog....",
+      ".kk..kk....."
+    ],
+    [
+      ".oooooo.....",
+      ".oooooog....",
+      ".oooooog....",
+      ".oooooog....",
+      ".oooooo....."
+    ],
+    [
+      ".oooooo.....",
+      ".ooo.oog....",
+      ".ooo.ss.....",
+      ".ooo.oog....",
+      ".oooooo....."
+    ],
+    [
+      ".oo.........",
+      ".oot.o.g....",
+      ".oot.k......",
+      ".oot.o.g....",
+      ".oo........."
+    ],
+    [
+      "............",
+      "..ot.o.gssss",
+      "...t...s....",
+      "..ot.o.gssss",
+      "............"
+    ],
+    [
+      "............",
+      "..o..o.grr..",
+      "........rr..",
+      "..o..o.grr..",
+      "............"
+    ],
+    [
+      "............",
+      "..oooo.grr..",
+      "..o..o..rr..",
+      "..oooo.grr..",
+      "............"
+    ],
+    [
+      "............",
+      ".......g....",
+      "............",
+      ".......g....",
+      "............"
+    ],
+    [
+      "............",
+      ".......g....",
+      "............",
+      ".......g....",
+      "............"
+    ],
+    [
+      "............",
+      ".......y....",
+      ".......y....",
+      ".......y....",
+      "............"
+    ]
+  ]
+}

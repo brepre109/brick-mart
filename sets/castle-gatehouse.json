@@ -1,0 +1,148 @@
+{
+  "id": "castle-gatehouse",
+  "name": "Gatehouse Towers",
+  "theme": "Castle",
+  "ages": "8+",
+  "blurb": "Twin crenelled towers, banners over the arch and a drawbridge down across the moat.",
+  "boxColor": "darkBlue",
+  "legend": {
+    "s": "lightGray",
+    "d": "darkGray",
+    "a": "tan",
+    "k": "black",
+    "w": "brown",
+    "t": "darkTan",
+    "r": "red",
+    "g": "gold",
+    "u": "blue",
+    "n": "green"
+  },
+  "layers": [
+    [
+      "ddddddddddd",
+      "d.ddddddd.d",
+      "d.ddddddd.d",
+      "ddddddddddd",
+      "uuuuuuuuuuu",
+      "uuuuuuuuuuu",
+      "nnnwwwwwnnn"
+    ],
+    [
+      "ddddddddddd",
+      "d.ddddddd.d",
+      "d.ddddddd.d",
+      "ddddddddddd",
+      "...twwwt...",
+      "...twwwt...",
+      "..........."
+    ],
+    [
+      "sssa...asss",
+      "s.sd...ds.s",
+      "s.sdwwwds.s",
+      "sssa...asss",
+      "...d...d...",
+      "...d...d...",
+      "..........."
+    ],
+    [
+      "sksa...asks",
+      "s.sd...ds.s",
+      "s.sdwgwds.s",
+      "sksa...asks",
+      "...........",
+      "...........",
+      "..........."
+    ],
+    [
+      "sssa...asss",
+      "s.sd...ds.s",
+      "s.sdwwwds.s",
+      "sssa...asss",
+      "...........",
+      "...........",
+      "..........."
+    ],
+    [
+      "dddaa.aaddd",
+      "d.dd...dd.d",
+      "d.ddwwwdd.d",
+      "dddaa.aaddd",
+      "...........",
+      "...........",
+      "..........."
+    ],
+    [
+      "sssaagaasss",
+      "s.sddddds.s",
+      "s.sddddds.s",
+      "sssaagaasss",
+      "...........",
+      "...........",
+      "..........."
+    ],
+    [
+      "sksdrsrdsks",
+      "s.sddddds.s",
+      "s.sddddds.s",
+      "sksdrsrdsks",
+      "...........",
+      "...........",
+      "..........."
+    ],
+    [
+      "sssdrgrdsss",
+      "s.sddddds.s",
+      "s.sddddds.s",
+      "sssdrgrdsss",
+      "...........",
+      "...........",
+      "..........."
+    ],
+    [
+      "sssd.d.dsss",
+      "s.s.....s.s",
+      "s.s.....s.s",
+      "sssd.d.dsss",
+      "...........",
+      "...........",
+      "..........."
+    ],
+    [
+      "sss.....sss",
+      "s.s.....s.s",
+      "s.s.....s.s",
+      "sss.....sss",
+      "...........",
+      "...........",
+      "..........."
+    ],
+    [
+      "ddd.....ddd",
+      "d.d.....d.d",
+      "d.d.....d.d",
+      "ddd.....ddd",
+      "...........",
+      "...........",
+      "..........."
+    ],
+    [
+      "s.s.....s.s",
+      "..s.....s..",
+      "s.........s",
+      "s.s.....s.s",
+      "...........",
+      "...........",
+      "..........."
+    ],
+    [
+      "...........",
+      "...........",
+      "...........",
+      "krr.....rrk",
+      "...........",
+      "...........",
+      "..........."
+    ]
+  ]
+}

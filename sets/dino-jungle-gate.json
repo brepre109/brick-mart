@@ -1,0 +1,79 @@
+{
+  "id": "dino-jungle-gate",
+  "name": "Jungle Gate",
+  "theme": "Dino",
+  "ages": "5+",
+  "blurb": "Two vine-covered posts, a log beam and a skull sign warning what lives inside.",
+  "boxColor": "darkGreen",
+  "legend": {
+    "b": "brown",
+    "T": "darkTan",
+    "l": "lime",
+    "G": "green",
+    "d": "darkGreen",
+    "w": "white",
+    "k": "black"
+  },
+  "layers": [
+    [
+      "...........",
+      "dbbd...dbbd",
+      "dGGG...GGGd"
+    ],
+    [
+      "...........",
+      ".bb.....bb.",
+      "Glb.....bGG"
+    ],
+    [
+      "...........",
+      ".bb.....bl.",
+      ".Gb.....bl."
+    ],
+    [
+      "...........",
+      ".bb.....bb.",
+      ".lb.....bG."
+    ],
+    [
+      "...........",
+      ".bb.....bG.",
+      ".bb.....bl."
+    ],
+    [
+      "...........",
+      ".bb.....bb.",
+      ".lb.....bG."
+    ],
+    [
+      "...........",
+      ".lb.....bb.",
+      ".Gb.....bl."
+    ],
+    [
+      "...........",
+      ".bb.....bb.",
+      ".lb.....bb."
+    ],
+    [
+      "...........",
+      "TTTTTTTTTTT",
+      "TbTTTTTTTbT"
+    ],
+    [
+      "...........",
+      "d.........d",
+      "GG..www..GG"
+    ],
+    [
+      "...........",
+      "...........",
+      "...wkwkw..."
+    ],
+    [
+      "...........",
+      "...........",
+      "...wwwww..."
+    ]
+  ]
+}

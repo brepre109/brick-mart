@@ -1,0 +1,126 @@
+{
+  "id": "veh-monster-truck",
+  "name": "Monster Truck",
+  "theme": "Vehicles",
+  "ages": "6+",
+  "blurb": "Four giant black tyres, an orange cab, a roof light bar and a spare wheel in the bed.",
+  "boxColor": "orange",
+  "legend": {
+    "o": "orange",
+    "k": "black",
+    "s": "silver",
+    "d": "darkGray",
+    "c": "glassBlue",
+    "y": "yellow"
+  },
+  "layers": [
+    [
+      "..kk.....kk..",
+      "..kk.....kk..",
+      ".............",
+      ".............",
+      ".............",
+      "..kk.....kk..",
+      "..kk.....kk.."
+    ],
+    [
+      ".kkkk...kkkk.",
+      ".kkkk...kkkk.",
+      ".............",
+      ".............",
+      ".............",
+      ".kkkk...kkkk.",
+      ".kkkk...kkkk."
+    ],
+    [
+      ".kkkk...kkkk.",
+      ".kkkk...kkkk.",
+      ".............",
+      ".............",
+      ".............",
+      ".kkkk...kkkk.",
+      ".kkkk...kkkk."
+    ],
+    [
+      ".kssk...kssk.",
+      ".kssk...kssk.",
+      ".............",
+      ".............",
+      ".............",
+      ".kssk...kssk.",
+      ".kssk...kssk."
+    ],
+    [
+      ".kkkk...kkkk.",
+      ".kkkk...kkkk.",
+      ".............",
+      ".............",
+      ".............",
+      ".kkkk...kkkk.",
+      ".kkkk...kkkk."
+    ],
+    [
+      "..kk.....kk..",
+      "..kkdddddkk..",
+      ".............",
+      ".............",
+      ".............",
+      "..kkdddddkk..",
+      "..kk.....kk.."
+    ],
+    [
+      ".............",
+      "okkkkoookkkkd",
+      "oddddoooooood",
+      "oddddoooooood",
+      "oddddoooooood",
+      "okkkkoookkkkd",
+      "............."
+    ],
+    [
+      ".............",
+      "oooooooooooos",
+      "o....ooooooos",
+      "o.kk.ooooooos",
+      "o.kk.ooooooos",
+      "oooooooooooos",
+      "............."
+    ],
+    [
+      ".............",
+      "ooooooccccooy",
+      "o....o...cooo",
+      "o.kk.o...cooo",
+      "o.kk.o...cooo",
+      "ooooooccccooy",
+      "............."
+    ],
+    [
+      ".............",
+      "....socccc...",
+      ".....o...ckk.",
+      "..kk.o...ckk.",
+      "..kk.o...ckk.",
+      "....socccc...",
+      "............."
+    ],
+    [
+      ".............",
+      "....sooooo...",
+      ".....ooooo...",
+      ".....ooooo...",
+      ".....ooooo...",
+      "....sooooo...",
+      "............."
+    ],
+    [
+      ".............",
+      ".......y.....",
+      ".......y.....",
+      ".......y.....",
+      ".......y.....",
+      ".......y.....",
+      "............."
+    ]
+  ]
+}

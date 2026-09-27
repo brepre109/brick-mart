@@ -1,0 +1,104 @@
+{
+  "id": "tech-excavator",
+  "name": "Digger Rig",
+  "theme": "Machines",
+  "ages": "8+",
+  "blurb": "Tracked digger: glass cab, a long yellow boom and a toothed bucket down in the dirt.",
+  "boxColor": "yellow",
+  "legend": {
+    "k": "black",
+    "g": "darkGray",
+    "s": "lightGray",
+    "w": "white",
+    "v": "silver",
+    "y": "yellow",
+    "o": "orange",
+    "c": "glassBlue",
+    "r": "red",
+    "b": "brown",
+    "d": "darkTan"
+  },
+  "layers": [
+    [
+      "sgkgkgks........",
+      "skgkgkgs.....bdb",
+      "............bdbb",
+      "...........bdbbb",
+      "...........dbbbb",
+      "skgkgkgs....bbbd",
+      "sgkgkgks.....bdb"
+    ],
+    [
+      "skgkgkgs........",
+      "sgkgkgks....bggw",
+      "..gggg.....dgbbs",
+      "..gggg.....bgbbw",
+      "..gggg.....dgbbs",
+      "sgkgkgks....gggw",
+      "skgkgkgs........"
+    ],
+    [
+      "kkkkkkkkk.......",
+      "ggggggggg...ggg.",
+      "ggggggggg...g...",
+      "ggggggggg...gb..",
+      "ggggggggg...g...",
+      "ggggggggg...ggg.",
+      "kkkkkkkkk......."
+    ],
+    [
+      ".kyyyyyy........",
+      ".kyyyyyy........",
+      ".kyyyyyyg...g...",
+      ".kyyyyyyg...g...",
+      ".kyyyyyyg...g...",
+      ".kyyyyyy........",
+      ".kyyyyyy........"
+    ],
+    [
+      ".kyyyyyy........",
+      ".kyyyyyy........",
+      ".kyyyyyyyv..y...",
+      ".kyyyyyyyy..y...",
+      ".kyyycccyy..y...",
+      ".kyyyccc........",
+      ".kyyyccc........"
+    ],
+    [
+      ".kyyyyyy........",
+      ".kgggkkk........",
+      ".kyyyyyy.yv.v...",
+      ".kyyyyyy.yy.y...",
+      ".kyyyccc.yy.y...",
+      ".koyyccc........",
+      ".kyoyccc........"
+    ],
+    [
+      "................",
+      "...g............",
+      "..........yvy...",
+      "..........yyy...",
+      "....yccc..yyy...",
+      "....yccc........",
+      "....yccc........"
+    ],
+    [
+      "................",
+      "...v............",
+      "...........yyy..",
+      "...........yyy..",
+      "....oooo...yyy..",
+      "....oooo........",
+      "....oooo........"
+    ],
+    [
+      "................",
+      "................",
+      "............gg..",
+      "............gv..",
+      "............gg..",
+      "......r.........",
+      "................"
+    ]
+  ]
+}

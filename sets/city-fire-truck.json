@@ -1,0 +1,102 @@
+{
+  "id": "city-fire-truck",
+  "name": "Fire Truck",
+  "theme": "City",
+  "ages": "6+",
+  "blurb": "A big red fire engine with a telescopic yellow ladder and flashing roof lights.",
+  "boxColor": "red",
+  "legend": {
+    "r": "red",
+    "k": "black",
+    "d": "darkGray",
+    "s": "silver",
+    "w": "white",
+    "c": "glassBlue",
+    "y": "yellow",
+    "u": "blue",
+    "g": "gold"
+  },
+  "layers": [
+    [
+      "..kkk......kkk..",
+      "..ddd......ddd..",
+      "..ddd......ddd..",
+      "..ddd......ddd..",
+      "..ddd......ddd..",
+      "..ddd......ddd..",
+      "..kkk......kkk.."
+    ],
+    [
+      "..ksk......ksk..",
+      ".dkkkddddddkkkdd",
+      ".ddddddddddddddd",
+      ".ddddddddddddddd",
+      ".ddddddddddddddd",
+      ".dkkkddddddkkkdd",
+      "..ksk......ksk.."
+    ],
+    [
+      "................",
+      ".rrrrrrrrrrrkkrs",
+      ".r.............s",
+      ".r.............s",
+      ".r.............s",
+      ".rrrrrrrrrrrkkrs",
+      "................"
+    ],
+    [
+      "................",
+      ".ssrssrssrsrwwrw",
+      ".r.............s",
+      ".r.............s",
+      ".r.............s",
+      ".ssrssrssrsrwwrw",
+      "................"
+    ],
+    [
+      ".............s..",
+      ".rrrrrrrrrrrgrrr",
+      ".r.............r",
+      ".r.............r",
+      ".r.............r",
+      ".rrrrrrrrrrrgrrr",
+      ".............s.."
+    ],
+    [
+      ".............s..",
+      ".rrrrrrrrrrccccc",
+      ".ddsdddsdddr...c",
+      ".ddsdddsdddr...c",
+      ".ddsdddsdddr...c",
+      ".rrrrrrrrrrccccc",
+      ".............s.."
+    ],
+    [
+      "................",
+      "..s.s.s....sssss",
+      ".d.......ddsrrrs",
+      "......ss.ddsrrrs",
+      ".d.......ddsrrrs",
+      "..s.s.s....sssss",
+      "................"
+    ],
+    [
+      "................",
+      ".............u..",
+      "yyyyyyyyyyy..w..",
+      "y.y.y.y.y.y..r..",
+      "yyyyyyyyyyy..w..",
+      ".............u..",
+      "................"
+    ],
+    [
+      "................",
+      "................",
+      "yyyyyy..........",
+      ".y.y.y..........",
+      "yyyyyy..........",
+      "................",
+      "................"
+    ]
+  ]
+}

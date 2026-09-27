@@ -1,0 +1,87 @@
+{
+  "id": "city-pizza-scooter",
+  "name": "Pizza Scooter",
+  "theme": "City",
+  "ages": "4+",
+  "blurb": "A red delivery scooter with a hot pizza box and a fresh pie on the back.",
+  "boxColor": "red",
+  "legend": {
+    "r": "red",
+    "k": "black",
+    "s": "silver",
+    "o": "orange",
+    "w": "white",
+    "y": "yellow",
+    "n": "tan",
+    "c": "glassClear",
+    "g": "green"
+  },
+  "layers": [
+    [
+      "...............",
+      "..kk.......kk..",
+      "..kk.......kk..",
+      "..............."
+    ],
+    [
+      "...............",
+      ".kssk....kssk..",
+      ".kssk....kssk..",
+      "..............."
+    ],
+    [
+      "...............",
+      "..kkrrrrrrrkk..",
+      "..kkrrrrrrrkk..",
+      "..............."
+    ],
+    [
+      "...............",
+      ".rrrrrrrrrrrrr.",
+      ".rrrrrrrrrrrrr.",
+      "..............."
+    ],
+    [
+      "...............",
+      ".rrrrrrr..rrry.",
+      ".rrrrrrr..rrry.",
+      "..............."
+    ],
+    [
+      "...............",
+      ".rrrrrrr..rrry.",
+      ".rrrrrrr..rrry.",
+      "..............."
+    ],
+    [
+      "...............",
+      ".sssskkkk.rrr..",
+      ".sssskkkk.rrr..",
+      "..............."
+    ],
+    [
+      ".wwwww.........",
+      ".wwwww....rr...",
+      ".wwwww....rr...",
+      ".wwwww........."
+    ],
+    [
+      ".wwwwg.........",
+      ".wwwww.....s...",
+      ".wwwww.....s...",
+      ".ggwrr........."
+    ],
+    [
+      ".ooooo.....s...",
+      ".ooooo.....k...",
+      ".ooooo.....k...",
+      ".ooooo.....s..."
+    ],
+    [
+      "..nnn......s...",
+      ".nrryn.........",
+      ".nyrrn.........",
+      "..nnn......s..."
+    ]
+  ]
+}

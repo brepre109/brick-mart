@@ -1,0 +1,17 @@
+{
+  "id": "space-moon-rover", "name": "Moon Rover", "theme": "Space", "ages": "5+", "pieces": null,
+  "blurb": "A six-wheel moon buggy with a blue windscreen, a solar panel and a big gold dish.", "boxColor": "darkBlue", "legend": {
+    "k": "black", "d": "darkGray", "l": "lightGray", "w": "white", "b": "blue", "c": "glassBlue", "s": "silver", "g": "gold"
+  },
+  "layers": [
+    [".k....k....k..", ".k....k....k..", "..............", "..............", "..............", "..............", ".k....k....k..", ".k....k....k.."],
+    ["kkk..kkk..kkk.", "kkk..kkk..kkk.", "..............", "..............", "..............", "..............", "kkk..kkk..kkk.", "kkk..kkk..kkk."],
+    ["ksk..ksk..ksk.", "ksk..ksk..ksk.", "dddddddddddddd", "dddddddddddddd", "dddddddddddddd", "dddddddddddddd", "ksk..ksk..ksk.", "ksk..ksk..ksk."],
+    [".k....k....k..", ".k....k....k..", "llllllllllllll", "llllllllllllll", "llllllllllllll", "llllllllllllll", ".k....k....k..", ".k....k....k.."],
+    ["..............", "..............", "wwwwwwwwwwwwww", "wwwwwwwwwwwwww", "wwwwwwwwwwwwww", "wwwwwwwwwwwwww", "..............", ".............."],
+    ["..............", "..............", "wwwwwwbbbbwccc", "wwwwwwbbbbwccc", "wwwwwwbbbbwccc", "wwwwwwbbbbwccc", "..............", ".............."],
+    ["..............", "..............", "..........wccc", "..ss......wccc", "..ss......wccc", "..........wccc", "..............", ".............."],
+    ["..............", ".gggg.........", "gggggg....wwww", "gggggg....wwww", "gggggg....wwww", ".gggg.....wwww", "..............", ".............."],
+    ["..............", "..............", "..............", "..ss.......ss.", "...........ss.", "..............", "..............", ".............."]
+  ]
+}

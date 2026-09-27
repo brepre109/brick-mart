@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#e8112d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23e8112d'/%3E%3Crect x='6' y='13' width='20' height='11' rx='2' fill='%23fff'/%3E%3Ccircle cx='12' cy='11' r='3' fill='%23fff'/%3E%3Ccircle cx='20' cy='11' r='3' fill='%23fff'/%3E%3C/svg%3E">
+<title>Brick Mart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap">
+<style>
+:root{
+  --red:#e8112d; --red2:#b60d23; --ink:#1d2330; --paper:#fff; --grey:#f2f4f7;
+  --line:#dfe3ea; --muted:#78839a; --gold:#f5b820; --good:#22a75b; --wish:#ff4f9a;
+  --bar:56px; --tray:142px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%;overflow:hidden;background:var(--ink);color:var(--ink);
+  font-family:"Fredoka",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-weight:600;
+  user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;touch-action:none;overscroll-behavior:none}
+button{font:inherit;color:inherit;border:none;cursor:pointer;background:none;padding:0}
+.screen{position:fixed;inset:0;display:none;flex-direction:column;background:var(--grey)}
+.screen.on{display:flex}
+canvas{display:block;width:100%;height:100%}
+.hide{display:none !important}
+
+/* ---------- shared chrome ---------- */
+.topbar{height:var(--bar);min-height:var(--bar);display:flex;align-items:center;gap:8px;padding:0 10px;
+  background:var(--red);color:#fff;box-shadow:0 2px 0 rgba(0,0,0,.14);position:relative;z-index:4}
+.topbar .ttl{font-size:19px;font-weight:700;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ico{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+  font-size:21px;background:rgba(255,255,255,.18)}
+.ico:active{transform:scale(.92)}
+.purse{background:#fff;color:#1d2330;border-radius:999px;padding:8px 13px;font-size:16px;font-weight:700;
+  display:flex;align-items:center;gap:5px;white-space:nowrap;box-shadow:0 2px 0 rgba(0,0,0,.12)}
+.purse b{color:var(--good)}
+.big{border-radius:18px;padding:15px 20px;font-size:19px;font-weight:700;display:flex;align-items:center;
+  justify-content:center;gap:9px;background:var(--red);color:#fff;box-shadow:0 4px 0 var(--red2)}
+.big:active{transform:translateY(3px);box-shadow:0 1px 0 var(--red2)}
+.big.go{background:var(--good);box-shadow:0 4px 0 #157a40}
+.big.grey{background:#fff;color:var(--ink);box-shadow:0 4px 0 var(--line)}
+.big[disabled]{opacity:.45;box-shadow:none}
+.stage{position:relative;flex:1;min-height:0;overflow:hidden}
+
+/* ---------- home ---------- */
+#home .stage{background:linear-gradient(180deg,#cfe4ff 0%,#eaf2ff 42%,#f6e6d2 42%,#efdcc4 100%)}
+#homeScroll{position:absolute;inset:0;overflow-y:auto;padding:12px 12px 22px;touch-action:pan-y}
+.panel{background:#fff;border-radius:20px;padding:12px;margin-bottom:12px;box-shadow:0 3px 0 rgba(0,0,0,.07)}
+.panel h3{margin:0 0 9px;font-size:15px;letter-spacing:.4px;color:var(--muted);display:flex;align-items:center;gap:7px}
+.panel h3 .n{margin-left:auto;background:var(--grey);border-radius:999px;padding:2px 9px;font-size:13px;color:var(--muted)}
+.row{display:flex;gap:9px;overflow-x:auto;padding-bottom:3px;touch-action:pan-x}
+.row::-webkit-scrollbar{height:0}
+.tile{flex:0 0 auto;width:104px;background:var(--grey);border-radius:15px;padding:7px;text-align:center;position:relative}
+.tile:active{transform:translateY(2px)}
+.tile canvas{width:90px;height:66px;border-radius:9px;background:#fff}
+.tile .nm{font-size:11.5px;margin-top:4px;line-height:1.15;height:26px;overflow:hidden;color:var(--ink)}
+.tile .tag{position:absolute;top:3px;right:3px;font-size:14px}
+.empty{color:var(--muted);font-size:13px;font-weight:500;padding:14px 6px;text-align:center;line-height:1.45}
+#door{position:absolute;right:12px;bottom:14px;width:112px;height:126px;border-radius:18px 18px 8px 8px;
+  background:linear-gradient(180deg,#f03145,#c30f24);box-shadow:0 5px 0 #8d0a1a,0 0 0 5px #fff;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:#fff;font-weight:700;z-index:3}
+#door:active{transform:translateY(3px);box-shadow:0 2px 0 #8d0a1a,0 0 0 5px #fff}
+#door .e{font-size:38px;line-height:1}
+#door .t{font-size:13px;letter-spacing:.5px}
+#piggy{display:flex;align-items:center;gap:11px;background:linear-gradient(180deg,#ffd9e8,#ffc2db);
+  border-radius:20px;padding:13px;margin-bottom:12px;box-shadow:0 3px 0 #e8a6c4}
+#piggy .e{font-size:38px}
+#piggy .tx{flex:1;min-width:0;font-size:14px;line-height:1.3}
+#piggy .tx b{display:block;font-size:17px}
+#piggy button{background:var(--good);color:#fff;border-radius:15px;padding:12px 16px;font-weight:700;
+  box-shadow:0 3px 0 #157a40;font-size:15px;white-space:nowrap}
+#piggy button:active{transform:translateY(2px);box-shadow:0 1px 0 #157a40}
+#piggy.spent{background:var(--grey);box-shadow:0 3px 0 var(--line)}
+.meter{height:7px;background:#fff;border-radius:99px;overflow:hidden;margin-top:4px}
+.meter i{display:block;height:100%;background:var(--wish);border-radius:99px}
+
+/* ---------- store map ---------- */
+#mapWrap{position:absolute;inset:0;overflow-y:auto;padding:12px;touch-action:pan-y;background:#f7f8fb}
+#bays{display:grid;grid-template-columns:repeat(2,1fr);gap:11px}
+.bay{background:#fff;border-radius:19px;padding:13px 9px;text-align:center;box-shadow:0 3px 0 rgba(0,0,0,.08);position:relative;overflow:hidden}
+.bay:active{transform:translateY(2px)}
+.bay .e{font-size:40px;line-height:1.1;display:block}
+.bay .t{font-size:14px;margin-top:5px}
+.bay .c{font-size:11.5px;color:var(--muted);font-weight:500}
+.bay .nu{position:absolute;top:6px;right:6px;background:var(--gold);color:#4a3200;border-radius:999px;
+  font-size:10px;padding:2px 7px;font-weight:700}
+.bay .strip{position:absolute;left:0;right:0;top:0;height:5px}
+
+/* ---------- aisle ---------- */
+#aisle .stage{background:#e9edf3}
+.paddle{position:absolute;top:0;bottom:0;width:84px;display:flex;align-items:center;justify-content:center;
+  font-size:40px;font-weight:700;color:#fff;z-index:2;border:none}
+#padL{background:linear-gradient(90deg,rgba(20,26,40,.34),rgba(20,26,40,0))}
+#padR{background:linear-gradient(270deg,rgba(20,26,40,.34),rgba(20,26,40,0))}
+.paddle::before{content:"";position:absolute;width:58px;height:58px;border-radius:50%;background:rgba(20,26,40,.42);
+  box-shadow:0 3px 9px rgba(0,0,0,.3)}
+.paddle span{position:relative;line-height:1;margin-top:-4px}
+.paddle:active::before{background:var(--red);transform:scale(.92)}
+#padL{left:0;border-radius:0 22px 22px 0}
+#padR{right:0;border-radius:22px 0 0 22px}
+#cartBtn{position:absolute;left:11px;bottom:11px;z-index:3;background:#fff;border-radius:19px;padding:10px 15px;
+  font-size:17px;font-weight:700;box-shadow:0 4px 0 rgba(0,0,0,.14);display:flex;align-items:center;gap:7px}
+#cartBtn:active{transform:translateY(2px);box-shadow:0 2px 0 rgba(0,0,0,.14)}
+#cartBtn .cn{background:var(--red);color:#fff;border-radius:999px;min-width:23px;height:23px;display:flex;
+  align-items:center;justify-content:center;font-size:13px;padding:0 6px}
+#toast{position:absolute;left:50%;top:14px;transform:translateX(-50%);background:rgba(20,26,40,.9);color:#fff;
+  border-radius:999px;padding:9px 17px;font-size:14px;z-index:6;pointer-events:none;opacity:0;transition:opacity .2s;white-space:nowrap;max-width:90%}
+#toast.on{opacity:1}
+
+/* ---------- overlays ---------- */
+.ov{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(18,23,34,.72);z-index:20;padding:16px}
+.ov.on{display:flex}
+.sheet{background:#fff;border-radius:26px;width:100%;max-width:430px;max-height:92%;overflow-y:auto;padding:16px;touch-action:pan-y}
+.sheet h2{margin:0 0 3px;font-size:24px}
+.sheet .sub{color:var(--muted);font-size:13.5px;font-weight:500;margin-bottom:11px;line-height:1.4}
+.boxart{width:100%;border-radius:17px;display:block;background:#eee}
+.facts{display:flex;gap:7px;flex-wrap:wrap;margin:11px 0}
+.fact{background:var(--grey);border-radius:11px;padding:6px 11px;font-size:13px}
+.fact b{color:var(--red)}
+.btns{display:flex;gap:9px;margin-top:12px}
+.btns .big{flex:1;padding:15px 8px;font-size:17px}
+.cartrow{display:flex;align-items:center;gap:11px;padding:8px 0;border-bottom:1px solid var(--line)}
+.cartrow canvas{width:74px;height:54px;border-radius:9px;flex:0 0 auto}
+.cartrow .nm{flex:1;min-width:0;font-size:15px}
+.cartrow .nm small{display:block;color:var(--muted);font-weight:500;font-size:12px}
+.cartrow .pr{font-size:16px;color:var(--good);font-weight:700}
+.cartrow .x{width:38px;height:38px;border-radius:12px;background:var(--grey);display:flex;align-items:center;justify-content:center;font-size:17px}
+.total{display:flex;align-items:center;font-size:20px;font-weight:700;padding:11px 2px}
+.total span{margin-left:auto;color:var(--good)}
+
+/* ---------- build ---------- */
+#build{background:#20263a}
+#build .stage{background:radial-gradient(130% 95% at 50% 10%,#39425f 0%,#1b2032 72%)}
+#dots{flex:1;display:flex;gap:3px;align-items:center;overflow:hidden;height:14px}
+#dots i{flex:1 1 0;min-width:2px;max-width:17px;height:8px;border-radius:99px;background:rgba(255,255,255,.3)}
+#dots i.on{background:var(--gold)}
+#dots i.cur{background:#fff;height:12px}
+#stepTxt{font-size:14px;font-weight:700;white-space:nowrap}
+#goalArt{position:absolute;right:9px;top:9px;width:84px;height:105px;border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,.4);z-index:3;background:#fff}
+#trayWrap{height:var(--tray);min-height:var(--tray);background:linear-gradient(180deg,#7b4f2b,#5d3a1e);
+  border-top:4px solid #8d5c33;position:relative;z-index:3;padding-bottom:env(safe-area-inset-bottom)}
+#tray{height:100%;display:block;width:100%}
+#finish{position:absolute;inset:0;z-index:9;display:none;flex-direction:column;align-items:center;justify-content:flex-end;
+  padding:22px;gap:11px;background:linear-gradient(180deg,rgba(24,29,45,0) 42%,rgba(24,29,45,.93) 76%)}
+#finish.on{display:flex}
+#finish h2{margin:0;font-size:31px;color:#fff;text-shadow:0 3px 0 rgba(0,0,0,.35)}
+#finish .pay{background:var(--gold);color:#4a3200;border-radius:999px;padding:8px 17px;font-size:17px;font-weight:700}
+#finish .btns{width:100%;max-width:430px}
+
+/* ---------- play ---------- */
+#play{background:#131828}
+#playBar{position:absolute;left:0;right:0;bottom:0;display:flex;gap:9px;padding:11px;
+  padding-bottom:calc(11px + env(safe-area-inset-bottom));z-index:3}
+#playBar .big{flex:1;padding:14px 6px;font-size:16px}
+
+/* ---------- sticker book ---------- */
+#bookWrap{position:absolute;inset:0;overflow-y:auto;padding:12px;touch-action:pan-y;background:#f7f8fb}
+#bookGrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:10px}
+.sticker{background:#fff;border-radius:15px;padding:7px;text-align:center;box-shadow:0 2px 0 rgba(0,0,0,.07);position:relative}
+.sticker canvas{width:100%;aspect-ratio:4/3;border-radius:9px;background:var(--grey)}
+.sticker .nm{font-size:11px;margin-top:4px;line-height:1.15;height:25px;overflow:hidden}
+.sticker.locked canvas{filter:grayscale(1) brightness(1.55) contrast(.4)}
+.sticker.locked .nm{color:var(--muted)}
+.sticker .st{position:absolute;top:3px;right:4px;font-size:15px}
+
+/* ---------- boot ---------- */
+#boot{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:14px;background:var(--red);color:#fff;text-align:center;padding:26px}
+#boot.hide{display:none}
+#boot .lg{font-size:clamp(38px,11vw,62px);font-weight:700;letter-spacing:-1px;line-height:1}
+#boot .lg b{background:#fff;color:var(--red);border-radius:14px;padding:0 12px;display:inline-block}
+#boot small{font-size:15px;font-weight:500;opacity:.92}
+#boot .tapme{margin-top:8px;background:#fff;color:var(--red);border-radius:999px;padding:14px 30px;font-size:19px;font-weight:700;box-shadow:0 5px 0 rgba(0,0,0,.2)}
+@media (max-height:680px){ :root{ --tray:118px } #door{width:98px;height:110px} #door .e{font-size:32px} }
+</style>
+</head>
+<body>
+
+<!-- ================= HOME ================= -->
+<div id="home" class="screen">
+  <div class="topbar">
+    <div class="ttl">My Room</div>
+    <button class="ico" id="toBook" title="Sticker book">📓</button>
+    <button class="ico" id="mute">🔊</button>
+    <div class="purse" id="purseHome">🪙 <b>$0</b></div>
+  </div>
+  <div class="stage">
+    <div id="homeScroll">
+      <div id="piggy"></div>
+      <div class="panel" id="pToy"><h3>📦 To build <span class="n">0</span></h3><div class="row" id="toyRow"></div></div>
+      <div class="panel" id="pShelf"><h3>🏆 My shelf <span class="n">0</span></h3><div class="row" id="shelfRow"></div></div>
+      <div class="panel" id="pWish"><h3>💗 Wish list <span class="n">0</span></h3><div class="row" id="wishRow"></div></div>
+      <div style="height:120px"></div>
+    </div>
+    <button id="door"><span class="e">🏬</span><span class="t">BRICK MART</span></button>
+  </div>
+</div>
+
+<!-- ================= STORE MAP ================= -->
+<div id="map" class="screen">
+  <div class="topbar">
+    <button class="ico" id="mapBack">‹</button>
+    <div class="ttl">Brick Mart</div>
+    <div class="purse" id="purseMap">🪙 <b>$0</b></div>
+  </div>
+  <div class="stage"><div id="mapWrap"><div id="bays"></div><div style="height:16px"></div></div></div>
+</div>
+
+<!-- ================= AISLE ================= -->
+<div id="aisle" class="screen">
+  <div class="topbar">
+    <button class="ico" id="aisleBack">‹</button>
+    <div class="ttl" id="aisleName">Aisle</div>
+    <div class="purse" id="purseAisle">🪙 <b>$0</b></div>
+  </div>
+  <div class="stage">
+    <canvas id="aisleC"></canvas>
+    <button class="paddle" id="padL"><span>‹</span></button>
+    <button class="paddle" id="padR"><span>›</span></button>
+    <button id="cartBtn">🛒 <span class="cn">0</span></button>
+    <div id="toast"></div>
+  </div>
+</div>
+
+<!-- ================= CHECKOUT ================= -->
+<div id="checkout" class="screen">
+  <div class="topbar"><div class="ttl">Checkout</div><div class="purse" id="purseCo">🪙 <b>$0</b></div></div>
+  <div class="stage"><canvas id="coC"></canvas></div>
+</div>
+
+<!-- ================= BUILD ================= -->
+<div id="build" class="screen">
+  <div class="topbar">
+    <button class="ico" id="buildBack">☰</button>
+    <div id="dots"></div>
+    <div id="stepTxt">1/1</div>
+    <button class="ico" id="spin">↻</button>
+  </div>
+  <div class="stage">
+    <canvas id="buildC"></canvas>
+    <canvas id="goalArt" width="168" height="210"></canvas>
+    <div id="finish">
+      <h2 id="finTitle">You built it!</h2>
+      <div class="pay" id="finPay">+$5</div>
+      <div class="btns">
+        <button class="big grey" id="finShelf">🗄️ Shelf</button>
+        <button class="big go" id="finPlay">🎮 Play</button>
+      </div>
+    </div>
+  </div>
+  <div id="trayWrap"><canvas id="tray"></canvas></div>
+</div>
+
+<!-- ================= PLAY ================= -->
+<div id="play" class="screen">
+  <div class="topbar">
+    <button class="ico" id="playBack">‹</button>
+    <div class="ttl" id="playName">Play</div>
+  </div>
+  <div class="stage">
+    <canvas id="playC"></canvas>
+    <div id="playBar">
+      <button class="big grey" id="btnSmash">💥 Smash</button>
+      <button class="big" id="btnRebuild">↻ Rebuild</button>
+    </div>
+  </div>
+</div>
+
+<!-- ================= STICKER BOOK ================= -->
+<div id="book" class="screen">
+  <div class="topbar"><button class="ico" id="bookBack">‹</button><div class="ttl">Sticker Book</div><div class="purse" id="purseBook">🪙 <b>$0</b></div></div>
+  <div class="stage"><div id="bookWrap"><div id="bookGrid"></div><div style="height:18px"></div></div></div>
+</div>
+
+<!-- ================= OVERLAYS ================= -->
+<div class="ov" id="ovBox"><div class="sheet" id="boxSheet"></div></div>
+<div class="ov" id="ovCart"><div class="sheet" id="cartSheet"></div></div>
+
+<div id="boot">
+  <div class="lg">BRICK <b>MART</b></div>
+  <small>Shop the toy aisle. Build what you buy.</small>
+  <button class="tapme" id="bootGo">Let's go!</button>
+</div>
+
+<script src="iso.js?v=38091619"></script>
+<script src="catalog.js?v=fe46bc65"></script>
+<script src="synth.js?v=7d432f4c"></script>
+<script src="save.js?v=d48b2fd5"></script>
+<script src="art.js?v=8965d015"></script>
+<script src="store.js?v=2689acb8"></script>
+<script src="build.js?v=db3f4f0e"></script>
+<script src="play.js?v=985ac7ad"></script>
+<script src="home.js?v=029b9471"></script>
+<script src="app.js?v=26c6608d"></script>
+</body>
+</html>

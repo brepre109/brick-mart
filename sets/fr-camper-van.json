@@ -1,0 +1,92 @@
+{
+  "id": "fr-camper-van",
+  "name": "Camper Van",
+  "theme": "Hangout",
+  "ages": "5+",
+  "blurb": "A cyan camper van with big windows, a pink door and a stripy sun awning.",
+  "boxColor": "cyan",
+  "legend": {
+    "k": "black",
+    "d": "darkGray",
+    "s": "silver",
+    "c": "cyan",
+    "w": "white",
+    "G": "glassBlue",
+    "p": "pink",
+    "y": "yellow"
+  },
+  "layers": [
+    [
+      "..kkkddddkkk..",
+      "..............",
+      "..............",
+      "..............",
+      "..kkkddddkkk..",
+      "..............",
+      ".w...w........"
+    ],
+    [
+      "cckskcccckskcs",
+      "............cs",
+      "............cs",
+      "............cs",
+      "cckskcssckskcs",
+      "..............",
+      ".w...w........"
+    ],
+    [
+      "cccccccccccccc",
+      "c..........ccy",
+      "c..........ccs",
+      "c..........ccy",
+      "ccccccppcccccc",
+      "..............",
+      ".w...w........"
+    ],
+    [
+      "cGGGcccccGGcG.",
+      "c..........GG.",
+      "c..........GG.",
+      "c..........GG.",
+      "cGGGccppsGGcG.",
+      "..............",
+      ".w...w........"
+    ],
+    [
+      "cGGGcccccGGG..",
+      "c..........G..",
+      "c..........G..",
+      "c..........G..",
+      "cGGGccppcGGG..",
+      ".pwpwp........",
+      ".pwpwp........"
+    ],
+    [
+      "wwwwwwwwwwww..",
+      "wwwwwwwwwwww..",
+      "wwwwwwwwwwww..",
+      "wwwwwwwwwwww..",
+      "wwwwwwwwwwww..",
+      ".pwpwp........",
+      ".............."
+    ],
+    [
+      "..............",
+      ".cccccccc.....",
+      ".cccccccc.....",
+      ".cGGGGGGc.....",
+      "..............",
+      "..............",
+      ".............."
+    ],
+    [
+      "..............",
+      ".wwwwwwww.....",
+      ".wwwwwwww.....",
+      ".wwwwwwww.....",
+      "..............",
+      "..............",
+      ".............."
+    ]
+  ]
+}
